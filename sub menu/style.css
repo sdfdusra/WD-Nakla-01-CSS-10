@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.navBar{
+    background-color: gray;
+    width: 1200px;
+    padding: 10px;
+    margin: 0px auto;
+}
+
+.navBar ul{
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.navBar li{
+    position: relative;
+}
+.navBar li a{
+    display: inline-block;
+    background-color: green;
+    color: honeydew;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    white-space: nowrap;
+}
+.navBar .haveSubMenu > a:after{
+    content: '';
+    width: 16px;
+    height: 16px;
+    display: block;
+    background-image: url('Screenshot_1-removebg-preview.png');
+    background-size: 100% 100%;
+    position: absolute;
+    top: 16px;
+    right:2px;
+}
+.navBar li a:hover{
+    background-color: red;
+}
+.navBar li+li{
+    border-left: 1px solid #fff;
+}
+.navBar li ul{
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    display: none;
+}
+.navBar li:hover ul{
+    display: flex;
+}
